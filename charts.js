@@ -87,10 +87,10 @@ function init() {
   var trace = [{
     x: otu_ids,
     y: sample_values,
-    text: [otu_labels],
+    text: otu_labels,
     mode: 'markers',
     marker: {
-      size: [400, 600, 800, 1000],
+      size: sample_values,
       sizemode: 'area'
     }
   }];
