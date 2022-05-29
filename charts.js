@@ -85,9 +85,9 @@ function init() {
   //DELIVERABLE 2
   // 1. Create the trace for the bubble chart.
   var trace = [{
-    x: 'otu_ids',
-    y: 'sample_labels',
-    text: ['otu_labels'],
+    x: otu_ids,
+    y: sample_values,
+    text: [otu_labels],
     mode: 'markers',
     marker: {
       size: [400, 600, 800, 1000],
@@ -123,13 +123,13 @@ function init() {
     mode: "gauge+number",
     value: 2,
     title: { text: "Belly Button Washing Frequency", font: { size: 24 } },
-    delta: { reference: 0, increasing: { color: "yellow" } },
+    delta: { reference: 0, increasing: { color: "black" } },
     gauge: {
-      axis: { range: [null, 10], tickwidth: 1, tickcolor: "darkblue" },
-      bar: { color: "darkblue" },
+      axis: { range: [null, 10], tickwidth: 1, tickcolor: "black" },
+      bar: { color: "black" },
       bgcolor: "white",
       borderwidth: 2,
-      bordercolor: "gray",
+      bordercolor: "white",
       steps: [
         { range: [0, 2], color: "red" },
         { range: [2, 4], color: "orange" },
@@ -138,7 +138,7 @@ function init() {
         { range: [8, 10], color: "green"},
       ],
       threshold: {
-        line: { color: "red", width: 4 },
+        line: { color: "black", width: 4 },
         thickness: 0.75,
         value: 490
       }
@@ -153,8 +153,8 @@ function init() {
         width: 500,
         height: 400,
         margin: { t: 25, r: 25, l: 25, b: 25 },
-        paper_bgcolor: "lavender",
-        font: { color: "darkblue", family: "Arial" }
+        paper_bgcolor: "white",
+        font: { color: "black", family: "Arial" }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
